@@ -1,0 +1,101 @@
+{
+  "theme": "dark",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST mixed with ARCHETYPE 5 (Tech/Data Vibe)",
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["400", "700", "900"],
+      "classes": "font-sans tracking-tight"
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "classes": "font-sans leading-relaxed text-zinc-400"
+    },
+    "labels": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400", "700"],
+      "classes": "font-mono tracking-[0.2em] uppercase text-xs text-cyan-500"
+    }
+  },
+  "colors": {
+    "background": "#09090B",
+    "surface": "#18181B",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "primary": "#06b6d4", 
+    "secondary": "#3b82f6",
+    "text_main": "#FAFAFA",
+    "text_muted": "#A1A1AA"
+  },
+  "visual_enhancers": {
+    "surfaces": "Grid Borders for main layout sections, flat solid surfaces with 1px border-white/10 for cards. Soft hover lift.",
+    "effects": "Subtle noise overlay on the background. Use Tracing Beam effect for the '3 Published Research Papers' highlight card.",
+    "buttons": "Pill-shaped or sharp rectangular buttons. Primary button uses Cyan with a subtle glow. Interaction animations required."
+  },
+  "layouts": {
+    "hero": "Asymmetric layout. Left-aligned heavy typography. Right side features a subtle 3D element or particle network. Massive padding (py-32).",
+    "skills": "Bento Grid (High Density). Tight gaps (gap-4). Every pixel utilized.",
+    "projects": "Grid Layout (grid-cols-1 md:grid-cols-2 lg:grid-cols-3). Cards with 1px border, dark background, image on top.",
+    "contact": "Two-column layout on desktop: Left side huge 'Let's Talk' text, Right side Shadcn form."
+  },
+  "components_to_use": [
+    "button",
+    "input",
+    "textarea",
+    "badge",
+    "sonner",
+    "form"
+  ],
+  "libraries": {
+    "icons": "@phosphor-icons/react",
+    "motion": "framer-motion",
+    "visuals": "tsparticles (for data network background in hero), react-fast-marquee (for skills ribbon)"
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1750969185331-e03829f72c7d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwbmV0d29yayUyMGRhcmt8ZW58MHx8fHwxNzg2ODA4NTY5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue lines and dots on black background",
+      "usage": "Use as a low-opacity (opacity-10 to opacity-20) background behind the hero section with a radial mask to fade out edges."
+    },
+    "project_ipl": {
+      "url": "https://images.unsplash.com/photo-1594470117722-de4b9a02ebed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxjcmlja2V0JTIwc3RhZGl1bSUyMGRhcmt8ZW58MHx8fHwxNzg2ODA4NTY5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Stadium",
+      "usage": "IPL Analysis Power BI Project Cover"
+    },
+    "project_movies": {
+      "url": "https://images.pexels.com/photos/18501410/pexels-photo-18501410.jpeg",
+      "description": "Empty cinema",
+      "usage": "Amazon Prime Video & IMDb Analytics Project Cover"
+    },
+    "project_ml_abstract": {
+      "url": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwbmV0d29yayUyMGRhcmt8ZW58MHx8fHwxNzg2ODA4NTY5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Blue background with lines and dots",
+      "usage": "Cover image for ML Notebooks (Credit Card Fraud, CLV Prediction, etc) and other Power BI projects"
+    }
+  },
+  "instructions_to_main_agent": [
+    "NOTE: You have .js/.jsx files, not .tsx files. Follow React/JS syntax.",
+    "Install required dependencies: framer-motion, tsparticles, @tsparticles/react, @phosphor-icons/react, react-fast-marquee.",
+    "Implement Shadcn UI for form elements (input, textarea, button, form) and use Sonner for contact form submission feedback.",
+    "Do NOT use a generic centered layout. Keep headings left-aligned. Use asymmetric margins.",
+    "Ensure ALL interactive elements and key informational elements have data-testid attributes for testing.",
+    "The hero section should have 'Harshit Goel' as H1 and 'Data Scientist | ML Engineer | Data Analyst' as animated text or subtitle.",
+    "Include a 'Download Resume' button in the hero and header. It should have a download functionality.",
+    "The projects section should list 5 Power BI dashboards (IPL Analysis, Amazon Prime Video, IMDb, Indian Restaurant Analytics, Superstore) and 3 ML notebooks (Credit Card Fraud Detection, CLV Prediction, Student Performance Prediction). Include download links for .pbix files.",
+    "Include an Education timeline and a Certifications & Achievements section highlighting '3 published research papers'.",
+    "Contact form must post to the FastAPI backend to store inquiries in MongoDB.",
+    "Include social links (LinkedIn, GitHub, email, phone) in the footer or a sticky sidebar."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic AI slop. Use layered design elements with z-index hierarchy.",
+    "Apply micro-animations to all interactive elements (hover states, entrance animations).",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Never apply universal transition (transition: all). Use specific properties.",
+    "Do not center align the app container. No .App { text-align: center; }.",
+    "Use modern pill-shaped or sharp buttons.",
+    "Never use AI assistant emoji characters for icons. Use Phosphor icons.",
+    "Never use placeholder URLs for images. Use the provided image URLs.",
+    "Do not use complete transparent background in header; use backdrop-blur and a semi-transparent dark color.",
+    "Ensure text contrast meets APCA/WCAG standards."
+  ]
+}
